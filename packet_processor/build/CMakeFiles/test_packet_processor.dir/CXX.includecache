@@ -66,17 +66,3 @@ cassert
 stack.hpp
 /home/naibu3/ingInformatica/ED/packet_processor/stack.hpp
 
-/home/naibu3/ingInformatica/ED/packet_processor/test_packet_processor.cpp
-exception
--
-iostream
--
-fstream
--
-string
--
-vector
--
-packet_processor.hpp
-/home/naibu3/ingInformatica/ED/packet_processor/packet_processor.hpp
-

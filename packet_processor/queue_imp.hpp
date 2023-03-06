@@ -15,8 +15,8 @@ template<class T>
 Queue<T>::Queue ()
 {
     //DONE
-    input_->Stack<T>::create();
-    output_->Stack<T>::create();
+    input_=Stack<T>::create();
+    output_=Stack<T>::create();
     //
     assert(is_empty());
 }
@@ -78,8 +78,7 @@ Queue<T>::enque(const T& new_it)
     //Hint: maybe you need to update the back item.
     input_->push(new_it);
     back_=new_it;
-    if(output_->is_empty())
-        flush_input_to_output();
+    if(output_->is_empty()) flush_input_to_output();
     //
     assert(back()==new_it);
     assert(size()==(old_size+1));
@@ -96,16 +95,11 @@ Queue<T>::deque()
     //DONE
     //Remember: we deque from the output stack and if the output stack is empty,
     //we need to flush the input stack into the output stack first.
-    if(output_->is_empty()){
-        flush_input_to_output();
-    }
+    if(output_->is_empty()) flush_input_to_output();
 
     output_->pop();
     
-    if(output_->is_empty() && !input_->is_empty()){
-        flush_input_to_output();
-    }
-
+    if(output_->is_empty() && !input_->is_empty()) flush_input_to_output();
     //
     assert(size()==(old_size-1));
 }
@@ -122,7 +116,7 @@ Queue<T>::flush_input_to_output()
     //TODO
     //Remember: the first item pushed into output is
     // the new back() of the queue.
-    while(input_->is_empty()){
+    while(!input_->is_empty()){
         output_->push(input_->top());
         input_->pop();
     }

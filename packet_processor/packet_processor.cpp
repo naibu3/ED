@@ -20,8 +20,10 @@ Response PacketProcessor::process(const Packet &packet)
     Response ret (true, 0); //Default is to drop the packet.
     //TODO
     //First: deque all processed packets at packet time arrival.
-
-
+    while(!_finish_time.is_empty() && _finish_time.front() <= packet.arrival_time)
+    {
+        _finish_time.deque();
+    }
     //
     //Second: Is there any place for this packet in the queue?
     if (_finish_time.size()<_max_size)
@@ -30,8 +32,14 @@ Response PacketProcessor::process(const Packet &packet)
     //its completion time will be 'package processing time' later time units.
     //Remember that the queue saves the finish processing time for the packets.
     //Remember to update the returned response.
-        
-        
+        if(!_finish_time.is_empty()){
+            ret.start_time=_finish_time.back();
+        }
+        else{
+            ret.start_time=packet.arrival_time;
+        }
+        _finish_time.enque(ret.start_time+packet.process_time);
+        ret.dropped=false;
     //
     }
     return ret;
