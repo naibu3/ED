@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/city.cpp
+cmath
+-
+city.hpp
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/city.hpp
+
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/city.hpp
+exception
+-
+iostream
+-
+string
+-
+item.hpp
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/item.hpp
+
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/item.hpp
+iostream
+-
+memory
+-
+
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/matrix.cpp
+matrix.hpp
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/matrix.hpp
+
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/matrix.hpp
+cassert
+-
+exception
+-
+iostream
+-
+memory
+-
+valarray
+-
+

@@ -1,0 +1,5 @@
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/build/CMakeFiles/rebuild_cache.dir
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/build/CMakeFiles/edit_cache.dir
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/build/CMakeFiles/test_create_graph.dir
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/build/CMakeFiles/test_wgraph.dir
+/home/naibu3/ingInformatica/ED/wgraph_paths/wgraph/build/CMakeFiles/wgraph.dir
